@@ -1,0 +1,112 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/arrivals.css' %}">
+    <main>
+        <p class="a">  
+            Discover the Versatility of Our Panel Partitions
+        </p> 
+           <div class="container">
+             <img src="{% static 'img/panel-removebg-preview.png' %}" alt="Avatar" class="image" height="500px" width="500px">
+             <div class="middle">
+               <div class="text">4 faced panel based partition </div>
+           </div>
+        <p class="normal">New Arrivals</p>
+        <section class="product-list">
+            <div class="product">
+                <div class="9.png" onclick="openModal('{% static "img/9.png" %}', 'Product 1')">
+                    <img src="{% static 'img/9.png' %}" alt="Product 1">
+                    <p class="p7"><b>Malto Boss Table 1.8M In Melamine Finish</b></p>
+                    <p class="p8">Length 71 x Width 63 x Height 30 Inches</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="1.png" onclick="openModal('{% static "img/1.png" %}', 'Product 2')">
+                    <img src="{% static 'img/1.png' %}" alt="Product 2">
+                    <p class="p7"><b>Computer Table</b></p>
+                    <p class="p8">
+                        Length 34.5 X Width 17.5 X Height 29.8 Inches</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="2.png" onclick="openModal('{% static "img/2.png" %}', 'Product 2')">
+                    <img src="{% static 'img/2.png' %}" alt="Product 2">
+                    <p class="p7"><b>Study Desk With Writing Pad In Melamine Finish</b></p>
+                    <p class="p8">
+                        Length-46in x Width-15.9in x Height-47.7in</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="3.png" onclick="openModal('{% static "img/3.png" %}', 'Product 2')">
+                    <img src="{% static 'img/3.png' %}" alt="Product 2">
+                    <p class="p7"><b>Ryan Computer Table</b></p>
+                    <p class="p8">Length-46in x Width-15.9in x Height-47.7in</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="4.png" onclick="openModal('{% static "img/4.png" %}', 'Product 2')">
+                    <img src="{% static 'img/4.png' %}" alt="Product 2">
+                    <p class="p7" ><b>Smart Table</b></p>
+                    <p class="p8">
+                        Length-43.2 X Width-23.6 X Minimum Height-28.3 & Maximum Height 46 in Inches</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="5.png" onclick="openModal('{% static "img/5.png" %}', 'Product 2')">
+                    <img src="{% static 'img/5.png' %}" alt="Product 2">
+                    <p class="p7"><b>Malaysian Conference Table In Melamine Finish</b></p>
+                    <p class="p8">Length: 94.5 x Width: 47.2 x Height:29.5 Inches</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="6.png" onclick="openModal('{% static "img/6.png" %}', 'Product 2')">
+                    <img src="{% static 'img/6.png' %}" alt="Product 2">
+                    <p class="p7"><b>Miller Conference Table In Melamine Finish</b></p>
+                    <p class="p8">Length: 94.5in x Width:47.5in x Height:29.5in
+
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="7.png" onclick="openModal('{% static "img/7.png" %}', 'Product 2')">
+                    <img src="{% static 'img/7.png' %}" alt="Product 2">
+                    <p class="p7"><b>Zane Reception Table</b></p>
+                    <p class="p8">Length 94.4 x Width 31.4 x Height 39.3 Inches
+
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="8.png" onclick="openModal('{% static "img/8.png" %}', 'Product 2')">
+                    <img src="{% static 'img/8.png' %}" alt="Product 2">
+                    <p class="p7"><b>Navy Wooden Study Table With Chair</b></p7>
+                    <p class="p8">Table: Length 43.4 x Width 17.8 x Height 35 Inches Chair: Length 16.5 x Width 16.9 x Height 32 Inches
+
+                    </p>
+                </div>
+            </div>
+            <!-- Add more product items here -->
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Modal Image">
+        <div id="modal-caption"></div>
+    </div>
+    <script>
+    function openModal(imageSrc, caption) {
+    var modal = document.getElementById("modal");
+    var modalImage = document.getElementById("modal-image");
+    var modalCaption = document.getElementById("modal-caption");
+    
+    modalImage.src = imageSrc;
+    modalCaption.innerHTML = caption;
+    modal.style.display = "flex";
+    }
+
+    function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+    }
+    </script>
+{% endblock %}

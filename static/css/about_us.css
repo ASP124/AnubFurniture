@@ -1,0 +1,57 @@
+/* Custom CSS */
+body {
+  line-height: 1.6;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.about {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #444;
+  font-size: 28px;
+  text-align: center;
+}
+
+.a {
+  color: #666;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.b {
+  color: #333;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.c {
+  padding-top: 20px;
+  color: #555;
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* Add some animations */
+.about p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

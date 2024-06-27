@@ -1,0 +1,45 @@
+body {
+  background-color: #f2f2f2;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #83b735;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: #555;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px; /* Add some space between the container and the button */
+}
+
+.btn {
+  background-color: #83b735;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block; /* Make the button a block-level element */
+  width: 100%; /* Take full width of the container */
+}
+
+.btn:hover {
+  background-color: #6e9f2d;
+}
+

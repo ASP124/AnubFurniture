@@ -1,0 +1,126 @@
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/bgimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.home-text h1 {
+    font-size: 2.7rem;
+}
+
+.home-text p {
+    font-size: 17.5px;
+    margin: 0.4rem 0 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the values for the desired shadow effect */
+}
+
+.home-text span {
+    color: var(--main-color);
+}
+
+.btn {
+    padding: 10px 14px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #8fc53d;
+}
+
+.heading {
+    width: 200px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.box {
+    position: relative;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 44px 4px 4px 4px;
+}
+
+.box .box-img {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 44px 4px 0 0;
+}
+
+.box .box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.box .box-img img:hover {
+    transform: scale(1.1);
+}
+
+.title-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.title-price h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 12px;
+    color: var(--main-color);
+}
+
+.stars .bx {
+    color: var(--main-color);
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+
+main {
+    padding-top: 70px;
+    /* Adjust this value based on the height of your footer */
+}
+
+@media screen and (max-width: 768px) {
+    .home-text {
+        text-align: center;
+    }
+    
+    .box {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .shop-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

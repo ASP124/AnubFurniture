@@ -1,0 +1,78 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+    <title>Anub Furnitures</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1><span>Elevate</span>Your<br />Living<span>Lifestyle</span></h1>
+            <p>
+                Where Home Meets Harmony:<br />
+                Anub Furnitures Furnishing Your Dreams!.
+            </p>
+            <a href="{% url 'support' %}" class="btn">Enquire Now</a>
+        </div>
+    </section>
+    <section class="shop" id="shop">
+        <div class="heading">
+            <span>
+                <h2>New Arrivals</h2>
+            </span>
+            <h2>Enquire Now</h2>
+        </div>
+
+        <div class="shop-container">
+            <!--BOX 1-->
+            <div class="box">
+                <div class="box-img">
+                    <img src="{% static 'img/New arri.jpg' %}" alt="" />
+                    <!--Image of Box 1-->
+                </div>
+                <div class="title-price">
+                    <h3>Square Tables</h3>
+                    <div class="stars">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            <!--BOX 2-->
+            <div class="box">
+                <div class="box-img">
+                    <img src="{% static 'img/Rectangletable.jpg' %}" alt="" />
+                    <!--Image of Box 2-->
+                </div>
+                <div class="title-price">
+                    <h3>Board Meeting Tables</h3>
+                    <div class="stars">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!--BOX 3-->
+            <div class="box">
+                <div class="box-img">
+                    <img src="{% static 'img/L Shaped Lounge.jpg' %}" alt="" />
+                    <!--Image of Box 3-->
+                </div>
+                <div class="title-price">
+                    <h3>L Shaped Lounges</h3>
+                    <div class="stars">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,198 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+    <title>Events</title>
+    <link rel="stylesheet" href="{% static 'css/events.css' %}">
+    <style>body, h1, h2, p {
+            margin: 8px;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* Centered Timeline container */
+        .timeline {
+            max-width: 800px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        /* Timeline connector */
+        .timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            background-color: #9d9d9d;
+            margin-left: -2px;
+        }
+
+        /* Event container */
+        .event-container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            margin-bottom: 50px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .event-container.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Events on left */
+        .event-container.left .event-content {
+            order: 2;
+            margin-left: auto;
+            margin-right: -130px;
+        }
+
+        .event-container.left .event-description {
+            order: 1;
+            padding-left: 20px;
+            padding-right: 0;
+            text-align: right;
+        }
+
+        /* Events on right */
+        .event-container.right .event-content {
+            order: 1;
+            margin-left: -130px;
+            margin-right: auto;
+        }
+
+        .event-container.right .event-description {
+            order: 2;
+            padding-left: 0;
+            padding-right: 20px;
+            text-align: left;
+        }
+
+        .event-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 35%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-description {
+            flex: 1;
+            border: 2px solid #ccc;
+            padding: 10px;
+            background-color: #ececec;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-description h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #69e97e;
+        }
+
+        .event-description p {
+            color: #666;
+        }
+
+        .event-image {
+            margin-bottom: 10px;
+        }
+
+        .event-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <div class="timeline">
+        <div class="event-container right">
+            <div class="event-content">
+                <div class="event-image">
+                    <img src="{% static 'img/Rot1.jpeg' %}" alt="Event 1 Photo 1">
+                </div>
+                <div class="event-image">
+                    <img src="{% static 'img/Rot2.jpeg' %}" alt="Event 1 Photo 2">
+                </div>
+            </div>
+            <div class="event-description">
+                <h2>ROTARY CLUB EVENT: YEAR 2020</h2>
+                <p>In association with Rotary Club of Dombivli Midtown we donated 20 study tables to Suit Jivan Trust which
+                    works for Orphan Children at Panvel.</p>
+            </div>
+        </div>
+        <div class="event-container left">
+            <div class="event-content">
+                <div class="event-image">
+                    <img src="{% static 'img/Bl1.jpg' %}" alt="Event 2 Photo 1">
+                </div>
+                <div class="event-image">
+                    <img src="{% static 'img/Bl2-2048x1365.jpg' %}" alt="Event 2 Photo 2">
+                </div>
+                <div class="event-image">
+                    <img src="{% static 'img/BBL6.jpg' %}" alt="Event 2 Photo 3">
+                </div>
+            </div>
+            <div class="event-description">
+                <h2>ROTARY CLUB EVENT: YEAR 2020</h2>
+                <p>During the Covid Pandemic there was a shortage of blood and with help of Rotary Club of 
+                    Dombivli Midtown we arranged a Blood Donation camp at Anub Furniture Factory. We could successfully collect 71 bottles of blood during these testing time.</p>
+            </div>
+        </div>
+        <div class="event-container right">
+            <div class="event-content">
+                <div class="event-image">
+                    <img src="{% static 'img/ch1.jpeg' %}" alt="Event 3 Photo 1">
+                </div>
+                <div class="event-image">
+                    <img src="{% static 'img/ch2.jpeg' %}" alt="Event 3 Photo 2">
+                </div>
+                <div class="event-image">
+                    <img src="{% static 'img/ch3.jpeg' %}" alt="Event 3 Photo 3">
+                </div>
+            </div>
+            <div class="event-description">
+                <h2>SATARA CHARA DONATION: AUGUST 2019</h2>
+                <p>There was a huge shortage of Fodder for Animals in the flood prone areas and this could have affected their lives and eventually 
+                    the livelihood of the people. We arranged this much required fodder immediately and dispatched the same to Satara and Sangli area.</p>
+            </div>
+        </div>
+        <!-- Repeat the above structure for more events -->
+    </div>
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function animateTimelineItems() {
+            const timelineItems = document.querySelectorAll('.event-container');
+            timelineItems.forEach((item) => {
+                if (isInViewport(item)) {
+                    item.classList.add('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateTimelineItems);
+        animateTimelineItems();
+    </script>
+{% endblock %}

@@ -1,0 +1,129 @@
+{% load static %}
+
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+
+    <style>
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            background-size: cover;
+            opacity: 0.8;
+            /* Adjust opacity here (0 to 1) */
+            z-index: -1;
+            /* Send the background container to the back */
+            animation: changeBackground 50s infinite ease-in-out;
+            /* Apply the animation with ease-in-out easing function */
+        }
+
+        @keyframes changeBackground {
+            0% {
+                background-image: url('https://source.unsplash.com/random/?furniture/1600x900');
+            }
+            10% {
+                background-image: url('https://source.unsplash.com/random/?interior/1600x900');
+            }
+            20% {
+                background-image: url('https://source.unsplash.com/random/?livingroom/1600x900');
+            }
+            30% {
+                background-image: url('https://source.unsplash.com/random/?office/1600x900');
+            }
+            40% {
+                background-image: url('https://source.unsplash.com/random/?bedroom/1600x900');
+            }
+            50% {
+                background-image: url('https://source.unsplash.com/random/?kitchen/1600x900');
+            }
+            60% {
+                background-image: url('https://source.unsplash.com/random/?bathroom/1600x900');
+            }
+            70% {
+                background-image: url('https://source.unsplash.com/random/?plywood/1600x900');
+            }
+            80% {
+                background-image: url('https://source.unsplash.com/random/?workspace/1600x900');
+            }
+            90% {
+                background-image: url('https://source.unsplash.com/random/?glass/1600x900');
+            }
+            100% {
+                background-image: url('https://source.unsplash.com/random/?home/1600x900');
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            /* Set the height of the HTML and body elements to 100% */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #d3cbcb;
+            padding: 10px 0;
+            color: #555;
+            font-size: 14px;
+            margin-top: auto;
+            /* Use "margin-top: auto" to push the footer to the bottom */
+        }
+
+        footer a {
+            color: #83b735;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container"></div> <!-- Container for the background image -->
+    <header>
+        <a href="#" class="logo">Anub <span>Furnitures.</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'products' %}">Products</a></li>
+            <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+            <li><a href="{% url 'support' %}">Support</a></li>
+            <li><a href="{% url 'our_partner' %}">Our Partner</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'about_us' %}">About Us</a></li>
+        </ul>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Your website footer content -->
+        Anub Furniture &copy; 2023 - All Rights Reserved.
+    </footer>
+
+    <!-- Include additional JavaScript or other scripts if needed -->
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+    <title>Our Products</title>
+    <link rel="stylesheet" href="{% static 'css/product.css' %}" />
+    <!-- New Section: Product Categories -->
+    <section id="product-categories">
+        <h2>Product Categories</h2>
+        <ul class="categories-list">
+            <li>
+                <a href="#" data-category="panel based system">Panel Based System</a>
+            </li>
+            <li>
+                <a href="#" data-category="desk based system">Desk Based System</a>
+            </li>
+            <li><a href="#" data-category="cabin furniture">Cabin Furniture</a></li>
+            <li><a href="#" data-category="table">Table</a></li>
+            <li><a href="#" data-category="storage">Storage</a></li>
+            <li><a href="#" data-category="show-all">All Products</a></li>
+        </ul>
+    </section>
+
+    <!-- New Section: Product List -->
+    <section id="product-list">
+        <h2>Featured Products</h2>
+        <div class="product-card" data-category="panel based system">
+            <img src="{% static 'img/adolfo-felix-PG8NyM_Mcts-unsplash.jpg' %}" alt="Product Image" />
+            <h3>Panel Based Desks</h3>
+            <p>
+                Revolutionize your workspace with our Panel-Based Desks. Seamlessly
+                blending privacy and functionality, these desks enhance focus and
+                collaboration
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <!-- Add more product cards as needed -->
+        <div class="product-card" data-category="desk based system">
+            <img src="{% static 'img/Desk-Based-1.jpg' %}" alt="Product Image" />
+            <h3>Hexagonal Desks</h3>
+            <p>
+                Elevate your office space with our Hexagonal Desk Based System.
+                Encouraging collaboration while maintaining privacy, this modern
+                design redefines workspace dynamics.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="cabin furniture">
+            <img src="{% static 'img/Boss Guy.jpg' %}" alt="Product Image" />
+            <h3>Cabin Desk</h3>
+            <p>
+                Introducing the epitome of elegance and functionality: our Wood-Based
+                Cabin Desk.Redefine your office aesthetic today.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="table">
+            <img src="{% static 'img/benjamin-child-0sT9YhNgSEs-unsplash.jpg' %}" alt="Product Image" />
+            <h3>Board Meeting Table</h3>
+            <p>
+                Experience the pinnacle of professionalism with our Board Meeting
+                Table. Crafted for impactful presentations and decisive
+                discussions.Elevate your boardroom to inspire success.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="storage">
+            <img src="{% static 'img/pickawood-LnXm8xLCFtg-unsplash.jpg' %}" alt="Product Image" />
+            <h3>Bookstorage Wardrobe</h3>
+            <p>
+                Organize your office essentials effortlessly with our Bookstorage
+                Wardrobe. Designed to elegantly house files and books, this wardrobe
+                blends practicality with sophistication, creating a clutter-free
+                workspace.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="desk based system">
+            <img src="{% static 'img/Desktable-2.jpg' %}" alt="Product Image" />
+            <h3>Personalised Desk</h3>
+            <p>
+                Elevate your home office experience with our Personalized Home Desk.
+                Tailored to your unique style and needs, this desk is more than just
+                furniture; it's an expression of your individuality.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="panel based system">
+            <img src="{% static 'img/Panel based system.png' %}" alt="Product Image" />
+            <h3>Privacy Added Desks</h3>
+            <p>
+                ntroducing our Panel-Based Desk with Enhanced Privacy Panels. Elevate
+                your workspace with a seamless blend of collaboration and
+                concentration.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="storage">
+            <img src="{% static 'img/Cupboard.jpg' %}" alt="Product Image" />
+            <h3>Essentials Wardrobe</h3>
+            <p>
+                Discover the perfect blend of storage and style with our Two-Column
+                Storage Wardrobe. Designed for optimal organization, this wardrobe
+                offers ample space to keep your belongings tidy and accessible.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="cabin furniture">
+            <img src="{% static 'img/Cabin Boss.jpg' %}" alt="Product Image" />
+            <h3>Boss Cabin Desk</h3>
+            <p>
+                Experience the epitome of executive luxury with our Luxurious Boss
+                Cabin. Meticulously crafted for discerning leaders, this desk
+                showcases unique features, from integrated wireless charging to
+                storage compartments.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="table">
+            <img src="{% static 'img/crew-7cPNnx13Qpo-unsplash.jpg' %}" alt="Product Image" />
+            <h3>Meeting Table</h3>
+            <p>
+                Versatility meets functionality with our 4-6 Person Meeting Table,
+                designed to seamlessly transition from boardroom to cafeteria.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="panel based system">
+            <img src="{% static 'img/Panel based workplace.jpg' %}" alt="Product Image" />
+            <h3>Panelized Desks</h3>
+            <p>
+                Introducing the future of office furniture: Panelised Desks. These
+                innovative workstations combine modern design with practicality,
+                featuring modular panels that adapt to your privacy preferences.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="desk based system">
+            <img src="{% static 'img/Desktable.jpg' %}" alt="Product Image" />
+            <h3>Pure Home Desks</h3>
+            <p>
+                Experience the essence of productivity and comfort with our Pure Home
+                Desks. Crafted for seamless integration into your living space, these
+                elegant desks bring a touch of professionalism to your home office.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="storage">
+            <img src="{% static 'img/pickawood-O3ZeDMslEJw-unsplash.jpg' %}" alt="Product Image" />
+            <h3>Storage Furniture</h3>
+            <p>
+                Revolutionize your storage with our innovative Rectangular Frame
+                Storage Furniture. A perfect blend of concealed corners and open
+                center, optimizing space while enhancing aesthetics.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="table">
+            <img src="{% static 'img/Rectangletable.jpg' %}" alt="Product Image" />
+            <h3>Executive Conference Table</h3>
+            <p>
+                Elevate managerial discussions with our Executive Conference Table.
+                Crafted to inspire confident decisions, this table blends timeless
+                design with modern functionality, creating a space where strategic
+                visions come to life.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-category="cabin furniture">
+            <img src="{% static 'img/Cabin.jpg' %}" alt="Product Image" />
+            <h3>Manager Cabin</h3>
+            <p>
+                Discover the epitome of executive sophistication with our Cabin
+                Furniture.Impeccably designed to professionalism and comfort, this
+                furniture collection enhances your workspace while reflecting
+                leadership.
+            </p>
+            <span class="price">$99.99</span>
+            <a href="#" class="btn">View Details</a>
+        </div>
+    </section>
+
+    <!-- JavaScript for category filtering -->
+    <script>
+        const categoriesList = document.querySelector(".categories-list");
+        const showAllLink = document.querySelector('[data-category="show-all"]');
+        const productCards = document.querySelectorAll(".product-card");
+
+        categoriesList.addEventListener("click", (event) => {
+            if (event.target.tagName === "A") {
+                const selectedCategory = event.target.getAttribute("data-category");
+
+                productCards.forEach((card) => {
+                    if (
+                        selectedCategory === "show-all" ||
+                        card.getAttribute("data-category") === selectedCategory
+                    ) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+        });
+
+        showAllLink.addEventListener("click", () => {
+            productCards.forEach((card) => {
+                card.style.display = "block";
+            });
+        });
+    </script>
+{% endblock %}

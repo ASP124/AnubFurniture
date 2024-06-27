@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <title>Contact Us</title>
+    <h1 style="text-align: center; margin-bottom: 20px;">Contact Us</h1>
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // JavaScript function to clear form fields after submission
+        function clearFormFields() {
+            document.getElementById("contact-form").reset();
+        }
+    </script>
+
+    <style>
+        /* Custom CSS for the form container */
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Set the background color with transparency */
+            border-radius: 10px;
+        }
+
+        /* Custom CSS for the form fields */
+        /* For example, if you want to style the input fields and labels */
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container label {
+            font-weight: bold;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #83b735;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #6e9f2d;
+        }
+
+        
+    </style>
+{% endblock %}
